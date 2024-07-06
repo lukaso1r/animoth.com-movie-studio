@@ -27,7 +27,7 @@ const Home: React.FC = () => {
           <video
             ref={videoRef}
             slot="media"
-            src="../../public/videos/test2.mp4"
+            src="/videos/test2.mp4"
             autoPlay
             muted={isMuted}
             loop
