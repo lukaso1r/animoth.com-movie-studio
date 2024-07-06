@@ -3,6 +3,7 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import HeaderPc from './components/HeaderPc';
+import Home from './pages/Home';
 
 // Funkcja symulująca opóźnienie
 const delay = (ms: number | undefined) => new Promise((resolve) => setTimeout(resolve, ms));
@@ -14,7 +15,7 @@ function App() {
   return (
     <>
       <HeaderPc />
-      
+      <Home />
       {/* <Suspense fallback={<div>Loading...</div>}>
         <LazyComponent />
       </Suspense> */}

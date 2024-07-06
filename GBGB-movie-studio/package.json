@@ -12,6 +12,7 @@
   "dependencies": {
     "@eslint/config-array": "^0.17.0",
     "@eslint/object-schema": "^2.1.4",
+    "@vidstack/react": "^1.11.25",
     "glob": "^10.4.3",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
