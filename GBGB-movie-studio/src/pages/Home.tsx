@@ -1,9 +1,9 @@
-import { useRef, useState } from "react";
+import React, { useRef, useState } from "react";
 import '@vidstack/react/player/styles/base.css';
 import { MediaPlayer, MediaProvider, Poster } from '@vidstack/react';
 
-const Home = () => {
-  const videoRef = useRef(null);
+const Home: React.FC = () => {
+  const videoRef = useRef<HTMLVideoElement>(null);
   const [isMuted, setIsMuted] = useState(true);
 
   const handleClick = () => {
@@ -21,7 +21,7 @@ const Home = () => {
         title="Sprite Fight"
         loop
         className="max-w-[100svw] max-h-[100svh] w-full h-full"
-        onClick={handleClick}  // Dodajemy obsługę zdarzenia kliknięcia
+        onClick={handleClick}
       >
         <MediaProvider>
           <video
