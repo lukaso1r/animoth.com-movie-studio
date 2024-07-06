@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import { useRef, useState } from "react";
 import '@vidstack/react/player/styles/base.css';
 import { MediaPlayer, MediaProvider, Poster } from '@vidstack/react';
 
