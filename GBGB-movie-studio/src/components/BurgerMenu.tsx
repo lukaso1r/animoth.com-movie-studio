@@ -1,12 +1,6 @@
 import type React from "react";
-import { useRef, useState } from "react";
-import HomeMainVideo from "./HomeMainVideo";
 
-interface BurgerMenuProps {
-    isMenuVisible: boolean;
-}
-
-const BurgerMenu: React.FC<BurgerMenuProps> = ({isMenuVisible}) => {
+const BurgerMenu: React.FC = () => {
 
     return (
         <>
@@ -34,7 +28,7 @@ const BurgerMenu: React.FC<BurgerMenuProps> = ({isMenuVisible}) => {
                         <li>CONTACT</li>
                     </ul>
                 </div>
-                            
+                   
             </div>
             
         </>
