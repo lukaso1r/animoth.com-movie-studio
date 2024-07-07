@@ -27,7 +27,7 @@ const HomeMainVideo = () =>{
           <video
             ref={videoRef}
             slot="media"
-            src="/videos/test2.mp4"
+            src="/videos/brunogosia.mp4"
             autoPlay
             muted={isMuted}
             loop
