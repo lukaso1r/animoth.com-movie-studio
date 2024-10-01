@@ -3,7 +3,7 @@ import '@vidstack/react/player/styles/base.css';
 import { MediaPlayer, MediaProvider, Poster } from '@vidstack/react';
 
 const HomeMainVideo = () =>{
-    const videoRef = useRef<HTMLVideoElement>(null);
+  const videoRef = useRef<HTMLVideoElement>(null);
   const [isMuted, setIsMuted] = useState(true);
 
   const handleClick = () => {
