@@ -4,7 +4,7 @@ import '@vidstack/react/player/styles/base.css';
 import HeaderPc from "../components/HeaderPc";
 import HomeMainVideo from "../components/HomeMainVideo";
 import BurgerMenu from "../components/BurgerMenu";
-import HomeMeshVideos from "../components/HomeMeshVideos";
+// import HomeMeshVideos from "../components/HomeMeshVideos";
 
 const Home: React.FC = () => {
   
@@ -19,7 +19,7 @@ const Home: React.FC = () => {
           <HomeMainVideo  />    
         </div>
         <div className="homeMeshContainer flex flex-col">
-          <HomeMeshVideos />
+          {/* <HomeMeshVideos /> */}
         </div>
       </div>
     </>
