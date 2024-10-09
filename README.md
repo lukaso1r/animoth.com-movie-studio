@@ -8,6 +8,6 @@ Created using:
 - Vite
 
 See progress at:
-https://gbgb-movie-studio.onrender.com/
+https://animoth.com/
 
 Currently 10% of website is ready.
