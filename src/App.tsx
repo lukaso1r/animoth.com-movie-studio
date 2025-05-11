@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Home from './pages/Home'
 import Test from './pages/films/Test'
 import Soon from './pages/films/Soon'
+import TestVidManagment from './pages/TestVidManagment'
 import './App.css'
 import { getFaviconUrl } from "./api/favicon";
 
@@ -35,6 +36,7 @@ const App: React.FC = () => {
         <Route path="/" element={<Home />} />
         <Route path="/test" element={<Test />} />
         <Route path="/films/soon" element={<Soon />} />
+        <Route path="/testVidManagment" element={<TestVidManagment />} />
         {/* Dodaj inne trasy tutaj */}
       </Routes>
     </Router>
