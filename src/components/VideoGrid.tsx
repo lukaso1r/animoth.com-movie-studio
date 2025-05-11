@@ -9,7 +9,7 @@ interface VideoGridProps {
   videos: Video[]
 }
 
-const VideoGrid: React.FC<VideoGridProps> = ({ videos }) => {
+const VideoGrid: React.FC<VideoGridProps> = () => {
 
   const [videoGridFromCms, setVideoGridFromCms] = useState<any[]>([{}])
 
@@ -23,7 +23,7 @@ const VideoGrid: React.FC<VideoGridProps> = ({ videos }) => {
 
   
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-6 grid-flow-row-dense auto-rows-auto gap-2">
+    <div className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-6 grid-flow-row-dense auto-rows-auto gap-0">
       {videoGridFromCms.map(video => (
         <VideoItem key={video.id} video={video} />
       ))}
