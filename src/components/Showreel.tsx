@@ -71,8 +71,8 @@ const Showreel: React.FC<ShowreelProps> = ({ onLoaded }) => {
             <div className='absolute bottom-0 w-full flex flex-row justify-center text-xl transition-all text-slate-700 items-center py-3 gap-4 z-50'>
                 {!isPlaying && <CiPlay1 onClick={handlePlay} className="cursor-pointer hover:text-4xl hover:text-slate-100 transition-all" />}
                 {isPlaying && <CiPause1 onClick={handlePause} className="cursor-pointer hover:text-4xl hover:text-slate-100 transition-all" />}
-                {!isMute && <CiVolumeMute onClick={handleMute} className="cursor-pointer hover:text-4xl hover:text-slate-100 transition-all" />}
-                {isMute && <CiVolumeHigh onClick={handleUnmute} className="cursor-pointer hover:text-4xl hover:text-slate-100 transition-all" />}
+                {!isMute && <CiVolumeHigh onClick={handleMute} className="cursor-pointer hover:text-4xl hover:text-slate-100 transition-all" />}
+                {isMute && <CiVolumeMute  onClick={handleUnmute} className="cursor-pointer hover:text-4xl hover:text-slate-100 transition-all" />}
             </div>
             {/* <div className='absolute top-1/2 w-full flex flex-col text-xl transition-all text-slate-700 items-end px-4 py-3 gap-4 z-50'>
                 {!isPlaying && <CiPlay1 onClick={handlePlay} className="cursor-pointer hover:text-4xl hover:text-slate-100 transition-all" />}
