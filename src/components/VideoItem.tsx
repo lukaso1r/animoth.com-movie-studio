@@ -3,8 +3,6 @@
 import React, { useState, useRef, useEffect } from 'react'
 // import { Link } from 'react-router-dom'
 import { CiPlay1, CiPause1, CiVolumeMute, CiVolumeHigh, CiMaximize1 , CiMinimize1  } from "react-icons/ci"
-import { SlSizeFullscreen } from "react-icons/sl";
-import { AiOutlineFullscreenExit } from "react-icons/ai";
 
 
 const TestVideoItem: React.FC<any> = ({ video }) => {
@@ -114,12 +112,12 @@ const TestVideoItem: React.FC<any> = ({ video }) => {
         />
         )}
         {isMuted ? (
-        <CiVolumeHigh
+        <CiVolumeMute 
           onClick={toggleMute}
           className="text-2xl text-white cursor-pointer hover:text-blue-400"
         />
         ) : (
-        <CiVolumeMute
+        <CiVolumeHigh
           onClick={toggleMute}
           className="text-2xl text-white cursor-pointer hover:text-blue-400"
         />
