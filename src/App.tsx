@@ -35,7 +35,6 @@ const App: React.FC = () => {
         <Route path="/" element={<Home />} />
         <Route path="/test" element={<Test />} />
         <Route path="/films/soon" element={<Soon />} />
-        {/* Dodaj inne trasy tutaj */}
       </Routes>
     </Router>
   )
