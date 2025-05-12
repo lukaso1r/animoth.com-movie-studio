@@ -43,6 +43,24 @@ export default {
           color: 'black',
           boxShadow: 'inset 300px 0 0 0 white',
         },
+        '.videoFullScreen': {
+          position: 'fixed',
+          zIndex: '50',
+          top: '0%',
+          left: '0%',
+          width: '100%',
+          height: '100%',
+          padding: '2% 2%',
+          backgroundColor: '#000000d4;',
+          boxShadow: 'inset 0px 0px 46px 18px #ffffff66',
+          transition: 'all 0.7s ease-in-out',
+            transform: 'translate(0%, 0%) scale(1)',
+            '&.active': {
+            transform: 'translate(0%, 0%) scale(0)',
+            },
+
+        },
+        
       })
     },
   ],
