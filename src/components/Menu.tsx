@@ -1,5 +1,6 @@
 import type React from "react";
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 const copyToClipboard = (text: string) => {
     navigator.clipboard.writeText(text).then(() => {
@@ -30,7 +31,7 @@ const Menu: React.FC = () => {
             <div className="menu-container bg-gray-900/80 min-w-full min-h-full fixed z-40 flex place-items-center gap-10">
                 <div className="menuNavigationBox w-fit h-fit pl-[10%]">
                     <ul className="text-6xl flex flex-col gap-2">
-                        <li className="socialsBoxItem">HOME</li>
+                        <li className="socialsBoxItem"><Link to={"/"}>HOME</Link></li>
                         <li className="socialsBoxItem">ABOUT</li>
                         <li className="socialsBoxItem">STORY</li>
                         <li className="socialsBoxItem">SKILLS</li>
