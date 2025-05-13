@@ -1,11 +1,10 @@
 import React, { useState, useRef, useEffect } from 'react'
-import { CiPlay1, CiPause1, CiVolumeMute, CiVolumeHigh } from "react-icons/ci"
-
+// import { CiPlay1, CiPause1, CiVolumeMute, CiVolumeHigh } from "react-icons/ci"
 
 const VideoSingleItem: React.FC<any> = ({ video }) => {
 
     const [isPlaying, setIsPlaying] = useState<boolean>(true)
-    const [isMuted, setIsMuted] = useState<boolean>(false)
+    const [isMuted] = useState<boolean>(true)
     const videoRef = useRef<HTMLVideoElement>(null)
 
     useEffect(() => {
@@ -32,31 +31,31 @@ const VideoSingleItem: React.FC<any> = ({ video }) => {
         }
     }, [isMuted])
 
-    const handlePlay = (e: React.MouseEvent) => {
-        e.stopPropagation()
-        console.log(`Playing video ID: ${video.id}`)
-        setIsPlaying(true)
-    }
+    // const handlePlay = (e: React.MouseEvent) => {
+    //     e.stopPropagation()
+    //     console.log(`Playing video ID: ${video.id}`)
+    //     setIsPlaying(true)
+    // }
 
-    const handlePause = (e: React.MouseEvent) => {
-        e.stopPropagation()
-        console.log(`Pausing video ID: ${video.id}`)
-        setIsPlaying(false)
-    }
+    // const handlePause = (e: React.MouseEvent) => {
+    //     e.stopPropagation()
+    //     console.log(`Pausing video ID: ${video.id}`)
+    //     setIsPlaying(false)
+    // }
 
 
-    const toggleMute = (e: React.MouseEvent) => {
-        e.stopPropagation()
-        setIsMuted(prev => !prev)
-        console.log(`Toggling mute for video ID: ${video.id}, now muted: ${!isMuted}`)
-    }
+    // const toggleMute = (e: React.MouseEvent) => {
+    //     e.stopPropagation()
+    //     setIsMuted(prev => !prev)
+    //     console.log(`Toggling mute for video ID: ${video.id}, now muted: ${!isMuted}`)
+    // }
 
 
 	return (
-		<div
+        <div
             id={video.id}
             className={`
-                relative group
+                 group
                 cursor-pointer
                 w-full h-auto p-0 m-0
                 aspect-video
@@ -68,17 +67,18 @@ const VideoSingleItem: React.FC<any> = ({ video }) => {
                 src={video.videoUrl?.url}
                 loop
                 className="w-full p-0 m-0 aspect-video"
-                onClick={handlePause}
+                // onClick={handlePause}
                 playsInline
                 muted={isMuted}
                 autoPlay
+                controlsList="nodownload" 
                 controls={true}
                 preload="true"
             />
             ) : (
             <img src={video.thumbnail?.url} alt={video.title} className="w-[100%] max-w-[100%]" />
             )}
-            <div
+            {/* <div
                 className="absolute p-4 inset-0 bg-black bg-opacity-50 
                     flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 
                     transition-opacity"
@@ -110,7 +110,7 @@ const VideoSingleItem: React.FC<any> = ({ video }) => {
                     )}
                     
                 </div>
-            </div>
+            </div> */}
         </div>
 	);
 }
