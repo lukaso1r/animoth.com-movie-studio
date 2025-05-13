@@ -2,8 +2,7 @@
 import React, { useEffect, useState } from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Home from './pages/Home'
-import Test from './pages/films/Test'
-import Soon from './pages/films/Soon'
+import VideoDetails from './pages/videos/VideoDetails'
 import './App.css'
 import { getFaviconUrl } from "./api/favicon";
 
@@ -33,8 +32,7 @@ const App: React.FC = () => {
 
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/test" element={<Test />} />
-        <Route path="/films/soon" element={<Soon />} />
+        <Route path="/videos/:id" element={<VideoDetails />} />
       </Routes>
     </Router>
   )
