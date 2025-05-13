@@ -2,7 +2,6 @@ import React, { useState, useRef, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { CiPlay1, CiPause1, CiVolumeMute, CiVolumeHigh, CiMaximize1 , CiMinimize1  } from "react-icons/ci"
 
-
 const TestVideoItem: React.FC<any> = ({ video }) => {
   const [isPlaying, setIsPlaying] = useState<boolean>(false)
   const [isMuted, setIsMuted] = useState<boolean>(false)
@@ -97,7 +96,7 @@ const TestVideoItem: React.FC<any> = ({ video }) => {
       >
       <h3 className="text-white text-lg font-semibold mb-2">{video?.title}</h3>
       <p className="text-white text-center text-sm mb-4">{video?.description}</p>
-      <Link to={`/videos/${encodeURIComponent(video.id)}`} className='seeMore text-white text-center text-sm mb-4'>Go to video</Link>
+      <Link to={`/videos/${encodeURIComponent(video.documentId)}`} className='seeMore text-white text-center text-sm mb-4'>Go to video</Link>
       <div className="flex space-x-4 pb-4">
         {isPlaying ? (
         <CiPause1
