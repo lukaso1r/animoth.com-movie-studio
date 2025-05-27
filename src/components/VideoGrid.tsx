@@ -17,7 +17,17 @@ const VideoGrid: React.FC<VideoGridProps> = () => {
     const fetchVideos = async () => {
       const videos = await getVideos();
       setVideoGridFromCms(videos);
+
+      // sort the videos by videoGridOrder after fetching
+      setVideoGridFromCms(videos => {
+        return videos.sort((a, b) => {
+          // console.log(`Sorting videos: ${a.videoGridOrder} - ${b.videoGridOrder}`);
+          return (a.videoGridOrder ?? 0) - (b.videoGridOrder ?? 0);
+        });
+      });
     };
+
+    // Fetch videos when the component mounts
     fetchVideos();
   }, [])
 
