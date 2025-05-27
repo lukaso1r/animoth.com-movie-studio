@@ -89,14 +89,14 @@ const TestVideoItem: React.FC<any> = ({ video }) => {
       ) : (
       <img src={video.thumbnail?.url} alt={video.title} className="w-full h-full object-cover" />
       )}
-      <pre className='text-white'>Tytuł: {video.title}, Kolejność: {video.videoGridOrder}</pre>
+      {/* <pre className='text-white'>Tytuł: {video.title}, Kolejność: {video.videoGridOrder}</pre> */}
       <div
       className="absolute p-4 inset-0 bg-black bg-opacity-50 
         flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 
         transition-opacity"
       >
-      {/* <h3 className="text-white text-lg font-semibold mb-2">{video?.title}</h3>
-      <p className="text-white text-center text-sm mb-4">{video?.description}</p> */}
+      <h3 className="text-white text-lg font-semibold mb-2">{video?.title}</h3>
+      <p className="text-white text-center text-sm mb-4">{video?.description}</p>
       <Link to={`/videos/${encodeURIComponent(video.documentId)}`} className='seeMore text-white text-center text-sm mb-4'>See more</Link>
       <div className="flex space-x-4 pb-4">
         {isPlaying ? (
