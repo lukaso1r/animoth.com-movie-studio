@@ -22,7 +22,7 @@ const VideoDetails: React.FC = () => {
         fetchVideo();
     }, [documentId]);
 
-    const [videoInfo, setVideoInfo] = useState({
+    const [videoInfo] = useState({
         time: '02:30',
         director: 'Butter Pants',
         year: '2077',
