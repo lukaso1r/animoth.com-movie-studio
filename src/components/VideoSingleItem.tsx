@@ -70,7 +70,7 @@ const VideoSingleItem: React.FC<any> = ({ video }) => {
                 // onClick={handlePause}
                 playsInline
                 muted={isMuted}
-                autoPlay
+                autoPlay={false}
                 controlsList="nodownload" 
                 controls={true}
                 preload="true"
