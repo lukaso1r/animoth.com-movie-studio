@@ -29,7 +29,7 @@ const VideoDetails: React.FC = () => {
         <div className="videoDetails py-4 pt-20 flex flex-col gap-16 items-center justify-start bg-black text-white min-h-screen">
             <div className='singleVideoTitleTex flex flex-col items-center justify-start gap-12'>
                 <h1 className='text-8xl font-bold'>{video?.title}</h1>
-                <p className='text-center w-2/3 font-medium text-lg'>Description soon</p>
+                <p className='text-center w-2/3 font-medium text-lg'>Description jajko soon</p>
             </div>
            <div className='videoBox w-full p-0 m-0 aspect-video' >   
                 {video ? (
