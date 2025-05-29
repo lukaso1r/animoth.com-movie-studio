@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Home from './pages/Home'
 import VideoDetails from './pages/videos/VideoDetails'
+import ScrollToTop from "./components/SrollToTop";
 import './App.css'
 import { getFaviconUrl } from "./api/favicon";
 
@@ -28,7 +29,7 @@ const App: React.FC = () => {
 
   return (
     <Router>
-
+       <ScrollToTop />
 
       <Routes>
         <Route path="/" element={<Home />} />
