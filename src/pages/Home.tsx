@@ -100,7 +100,6 @@ const sampleVideos = [
 
 const Home: React.FC = () => {
     const [isLoading, setIsLoading] = useState(true)
-    const [isMenuVisible, setIsMenuVisible] = useState(false);
 
   
     const handleShowreelLoaded = () => {
@@ -110,9 +109,7 @@ const Home: React.FC = () => {
     return (
       <div className="relative flex flex-col bg-black">
         {isLoading && <LoadingScreen />}
-        <Header  setIsMenuVisible={setIsMenuVisible} isMenuVisible={isMenuVisible}/>
-        {isMenuVisible && <Menu />}
-
+        <Header />
         <div className="max-h-[100vh] lg:min-h-[100vh]">
           <Showreel onLoaded={handleShowreelLoaded} />
         </div>
