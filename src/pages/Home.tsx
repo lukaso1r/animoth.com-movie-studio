@@ -1,6 +1,5 @@
 // biome-ignore lint/style/useImportType: <explanation>
 import React, { useState } from 'react'
-import Header from '../components/Header'
 import LoadingScreen from '../components/LoadingScreen'
 import Showreel from '../components/Showreel'
 import VideoGrid from '../components/VideoGrid'
@@ -108,7 +107,6 @@ const Home: React.FC = () => {
     return (
       <div className="relative flex flex-col bg-black">
         {isLoading && <LoadingScreen />}
-        <Header />
         <div className="max-h-[100vh] lg:min-h-[100vh]">
           <Showreel onLoaded={handleShowreelLoaded} />
         </div>
