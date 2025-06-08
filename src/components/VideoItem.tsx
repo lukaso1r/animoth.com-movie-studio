@@ -160,17 +160,21 @@ const TestVideoItem: React.FC<any> = ({ video }) => {
             className="text-2xl text-white cursor-pointer hover:text-blue-400"
           />
           )}
-          {isMuted ? (
-          <CiVolumeMute 
-            onClick={toggleMute}
-            className="text-2xl text-white cursor-pointer hover:text-blue-400"
-          />
-          ) : (
-          <CiVolumeHigh
-            onClick={toggleMute}
-            className="text-2xl text-white cursor-pointer hover:text-blue-400"
-          />
+
+          {isPlaying && (
+            isMuted ? (
+              <CiVolumeMute 
+                onClick={toggleMute}
+                className="text-2xl text-white cursor-pointer hover:text-blue-400"
+              />
+            ) : (
+              <CiVolumeHigh
+                onClick={toggleMute}
+                className="text-2xl text-white cursor-pointer hover:text-blue-400"
+              />
+            )
           )}
+          
           {isFullscreen ? (
           <CiMinimize1
             onClick={toggleFullscreen}
