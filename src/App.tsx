@@ -2,6 +2,11 @@
 import React, { useEffect, useState } from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Home from './pages/Home'
+import Contact from './pages/Contact'
+import About from './pages/About'
+import Offer from './pages/Offer'
+import Header from './components/Header'
+
 import VideoDetails from './pages/videos/VideoDetails'
 import ScrollToTop from "./components/SrollToTop";
 import './App.css'
@@ -30,10 +35,14 @@ const App: React.FC = () => {
   return (
     <Router>
        <ScrollToTop />
+      <Header />
 
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/videos/:documentId" element={<VideoDetails />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/offer" element={<Offer />} />
       </Routes>
     </Router>
   )
