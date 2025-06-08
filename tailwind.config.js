@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+
 export default {
   content: [
     "./index.html",
@@ -17,6 +18,10 @@ export default {
       },
       maxWidth: {
         '50%': '50%',
+      },
+      fontFamily: {
+        shadowsIntoLight: ['"Shadows Into Light"', 'cursive'],
+        caveat: ['"Caveat Brush"', 'cursive'],
       },
     },
   },
@@ -61,6 +66,11 @@ export default {
         '.textShadow': {
           textShadow: '0px 0px 10px rgba(66, 68, 90, 1);',
         },
+
+        '.fontShadowIntoLight': {
+          fontFamily: ' "Shadows Into Light", cursive'
+        },
+        
       })
     },
   ],
