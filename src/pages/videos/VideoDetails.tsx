@@ -4,14 +4,11 @@ import { BlocksRenderer } from '@strapi/blocks-react-renderer';
 import { getSingleVideo } from '../../api/getSingleVideo';
 
 import VideoSingleItem from '../../components/VideoSingleItem';
-import Header from '../../components/Header';
-import Menu from '../../components/Menu'
 
 
 const VideoDetails: React.FC = () => {
 
     const [video, setVideo] = useState<any>(null);
-    const [isMenuVisible, setIsMenuVisible] = useState(false);
 
     const documentId = useParams().documentId;
 
@@ -24,15 +21,8 @@ const VideoDetails: React.FC = () => {
         fetchVideo();
     }, [documentId]);
    
-    // const testFn = () => {
-    //     console.log('Test function called');
-    //     console.log('Video Description:', video?.Description);
-    // }
-
     return (
         <>
-        <Header setIsMenuVisible={setIsMenuVisible} isMenuVisible={isMenuVisible}/>
-        {isMenuVisible && <Menu />}
         <div className="videoDetails py-4 pt-20 pb-24 flex flex-col gap-16 items-center justify-start bg-black text-white min-h-screen">
            <div className='videoBox w-[70%] p-0 m-0 aspect-video' >   
                 {video ? (
