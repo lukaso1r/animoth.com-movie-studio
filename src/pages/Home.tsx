@@ -4,7 +4,6 @@ import Header from '../components/Header'
 import LoadingScreen from '../components/LoadingScreen'
 import Showreel from '../components/Showreel'
 import VideoGrid from '../components/VideoGrid'
-import Menu from '../components/Menu'
 
 const sampleVideos = [
   {
