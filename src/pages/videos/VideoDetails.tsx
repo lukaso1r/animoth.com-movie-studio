@@ -1,7 +1,7 @@
 import React, {useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { BlocksRenderer } from '@strapi/blocks-react-renderer';
-import { getSingleVideo } from '../../api/getSingleVideo';
+import { useFetchData } from '../../hooks/useFetchData';
 
 import VideoSingleItem from '../../components/VideoSingleItem';
 
@@ -9,14 +9,15 @@ import VideoSingleItem from '../../components/VideoSingleItem';
 const VideoDetails: React.FC = () => {
 
     const [video, setVideo] = useState<any>(null);
-
     const documentId = useParams().documentId;
+
+    const fetchSingleVideo = useFetchData<{ data: any }>();
 
     useEffect(() => {
         const fetchVideo = async () => {
-            const videoData = await getSingleVideo(documentId as string);
-            setVideo(videoData);
-            console.log('Fetched video:', videoData);
+            const response = await fetchSingleVideo(`video-grids/${documentId}?populate=*`);
+            setVideo(response.data);
+            console.log('Fetched video:', response);
         };
         fetchVideo();
     }, [documentId]);

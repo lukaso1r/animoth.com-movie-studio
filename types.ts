@@ -1,4 +1,5 @@
 export interface Video {
+    [x: string]: number
     id: number
     title: string
     description: string

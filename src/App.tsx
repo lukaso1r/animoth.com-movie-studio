@@ -1,6 +1,7 @@
 // biome-ignore lint/style/useImportType: <explanation>
 import React, { useEffect, useState } from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+
 import Home from './pages/Home'
 import Contact from './pages/Contact'
 import About from './pages/About'
@@ -10,14 +11,26 @@ import Header from './components/Header'
 import VideoDetails from './pages/videos/VideoDetails'
 import ScrollToTop from "./components/SrollToTop";
 import './App.css'
-import { getFaviconUrl } from "./api/favicon";
+import { useFetchData } from './hooks/useFetchData'
 
 const App: React.FC = () => {
 
   const [faviconUrl, setFaviconUrl] = useState<string | null>(null);
+  const fetchFavicon = useFetchData<{ data: { favicon: { url: string } } }>();
 
   useEffect(() => {
-    getFaviconUrl().then(setFaviconUrl);
+    const getFaviconUrl = async () => {
+      try {
+        const response = await fetchFavicon('favicon?populate=favicon');
+        setFaviconUrl(response.data.favicon.url);
+        console.log('Fetched favicon URL:', response.data.favicon.url);
+      } catch (error) {
+        console.error("Error fetching favicon:", error);
+      }
+    };
+    getFaviconUrl();
+
+
   }, []);
 
   useEffect(() => {
