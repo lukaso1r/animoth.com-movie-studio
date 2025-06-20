@@ -1,8 +1,13 @@
 // biome-ignore lint/style/useImportType: <explanation>
 import React from 'react'
 import { Link } from 'react-router-dom'
+import  {  useLanguage } from '../context/LanguageContext'
+
+
 
 const Header: React.FC = () => {
+
+  const { language, setLanguage } = useLanguage();
 
   return (
     <header className="fixed top-0 w-full flex justify-between items-center p-4 px-8 z-50 bg-black bg-opacity-30 ">
@@ -14,7 +19,12 @@ const Header: React.FC = () => {
             <li><Link className='hover:text-white' to="/about">About</Link></li>
             <li><Link className='hover:text-white' to="/offer">Offer</Link></li>
             <li><Link className='hover:text-white' to="/contact">Contact</Link></li>
-            <li className='pl-10'><a className='hover:text-white'>EN</a></li>
+            <li className='pl-10'>
+              <select className='bg-transparent text-neutral-300 text-4xl font-caveat' value={language} onChange={(e) => setLanguage(e.target.value)}>
+                <option value="en">EN</option>
+                <option value="pl-PL">PL</option>
+              </select>
+            </li>
           </ul>
 
         </nav>

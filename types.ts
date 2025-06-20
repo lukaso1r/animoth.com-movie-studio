@@ -1,5 +1,6 @@
 export interface Video {
     id: number
+    videoGridOrder?: number
     title: string
     description: string
     thumbnail: string
