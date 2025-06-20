@@ -20,7 +20,7 @@ const VideoDetails: React.FC = () => {
             console.log('Fetched video:', response);
         };
         fetchVideo();
-    }, [documentId]);
+    }, [documentId, fetchSingleVideo]);
    
     return (
         <>
