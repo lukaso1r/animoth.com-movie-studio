@@ -15,12 +15,12 @@ const Header: React.FC = () => {
           <h1 className='w-auto text-white text-4xl font-caveat'>ANIMOTH</h1>
         </Link>
         <nav>
-          <ul className="flex space-x-10 text-neutral-300 text-4xl font-caveat ">
-            <li><Link className='hover:text-white' to="/about">About</Link></li>
-            <li><Link className='hover:text-white' to="/offer">Offer</Link></li>
-            <li><Link className='hover:text-white' to="/contact">Contact</Link></li>
-            <li className='pl-10'>
-              <select className='bg-transparent text-neutral-300 text-4xl font-caveat' value={language} onChange={(e) => setLanguage(e.target.value)}>
+          <ul className="flex space-x-10 text-neutral-300 text-4xl font-caveat">
+            <li className=''><Link className='hover:text-white' to="/about">About</Link></li>
+            <li className=''><Link className='hover:text-white' to="/offer">Offer</Link></li>
+            <li className=''><Link className='hover:text-white' to="/contact">Contact</Link></li>
+            <li className='pl-0 '>
+              <select className='p-0 m-0 -mt-[3px] bg-transparent' value={language} onChange={(e) => setLanguage(e.target.value)}>
                 <option value="en">EN</option>
                 <option value="pl-PL">PL</option>
               </select>
