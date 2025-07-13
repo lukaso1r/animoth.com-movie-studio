@@ -39,8 +39,6 @@ const Header: React.FC = () => {
         <h1 className="w-auto text-white text-4xl font-caveat">ANIMOTH</h1>
       </Link>
 
-      {menuOpen && ( <p>Menu open</p>) }
-
       {/* Hamburger button for mobile */}
       <button
         className="md:hidden flex flex-col justify-center items-center w-10 h-10 focus:outline-none"
@@ -80,7 +78,7 @@ const Header: React.FC = () => {
               value={language}
               onChange={(e) => setLanguage(e.target.value)}
             >
-              <option value="en">EN</option>
+              <option  value="en">EN</option>
               <option value="pl-PL">PL</option>
             </select>
           </li>
@@ -117,8 +115,8 @@ const Header: React.FC = () => {
                 value={language}
                 onChange={(e) => setLanguage(e.target.value)}
               >
-                <option value="en">EN</option>
-                <option value="pl-PL">PL</option>
+                <option className='text-base' value="en">EN</option>
+                <option className='text-base' value="pl-PL">PL</option>
               </select>
             </li>
           </ul>
