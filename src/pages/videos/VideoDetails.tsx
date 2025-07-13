@@ -22,7 +22,7 @@ const VideoDetails: React.FC = () => {
 
     return (
         <>
-            <div className="videoDetails  py-4 pt-20 pb-24 flex flex-col gap-16 items-center justify-start bg-black text-white min-h-screen text-justify">
+            <div className="videoDetails  py-4 pt-20 pb-24 flex flex-col gap-16 items-center justify-start bg-black text-white min-h-screen ">
                 <div className="videoBox w-full sm:w-[90%] md:w-[80%] lg:w-[70%] p-0 m-0 aspect-video">
                     {video ? (
                         <VideoSingleItem video={video} />
@@ -30,7 +30,7 @@ const VideoDetails: React.FC = () => {
                         <div className="skeleton-loader animate-pulse bg-gray-800 w-full h-full" />
                     )}
                 </div>
-                <div className="singleVideoTitleTex px-6 flex flex-col items-start justify-start md:gap-12 w-full sm:w-[90%] md:w-[80%] lg:w-[70%]">
+                <div className="singleVideoTitleTex px-6 flex flex-col items-start justify-start md:gap-12 w-full sm:w-[90%] md:w-[80%] lg:w-[70%] text-justify">
                     <div className="videoInfo flex flex-col lg:flex-row items-start justify-start w-full lg:gap-20">
                         <div className="videoInfoDetails min-w-max mb-6 lg:mb-0">
                             <ul>
