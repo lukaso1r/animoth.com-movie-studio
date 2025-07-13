@@ -1,16 +1,45 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { useLanguage } from '../context/LanguageContext'
 
 const Header: React.FC = () => {
   const { language, setLanguage } = useLanguage()
   const [menuOpen, setMenuOpen] = useState(false)
+  const [isScrolled, setIsScrolled] = useState(false)
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY >= 70) {
+        setIsScrolled(true)
+      } else {
+        setIsScrolled(false)
+      }
+    }
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
 
   return (
-    <header className="fixed top-0 w-full flex justify-between items-center p-4 px-8 z-50 bg-black bg-opacity-30">
+    <>
+    { isScrolled && <div className='h-[70px]' /> }
+
+    <header
+      className={`
+        top-0 w-full flex justify-between items-center p-4 px-8 z-50 bg-black 
+        bg-opacity-30 transition-all duration-500 ease-in-out
+        ${isScrolled ? ' fixed shadow-lg backdrop-blur-md' : ''}
+        ${menuOpen ? 'fixed' : ''}
+      `}
+      style={{
+        transform: isScrolled ? 'translateY(0)' : 'translateY(0)',
+        transition: 'box-shadow 0.5s, backdrop-filter 0.5s, background 0.5s, translateY 1s'
+      }}
+    >
       <Link to="/" onClick={() => setMenuOpen(false)}>
         <h1 className="w-auto text-white text-4xl font-caveat">ANIMOTH</h1>
       </Link>
+
+      {menuOpen && ( <p>Menu open</p>) }
 
       {/* Hamburger button for mobile */}
       <button
@@ -60,7 +89,7 @@ const Header: React.FC = () => {
       
       {/* Mobile nav */}
       {menuOpen && (
-        <nav className="absolute top-full left-0 w-full bg-black bg-opacity-90 md:hidden">
+        <nav className="absolute z-50 top-full left-0 w-full bg-black bg-opacity-90 md:hidden">
           <ul className="flex flex-col items-center space-y-6 py-6 text-neutral-300 text-3xl font-caveat">
             <li>
               <Link className="hover:text-white" to="/">
@@ -96,6 +125,7 @@ const Header: React.FC = () => {
         </nav>
       )}
     </header>
+    </>
   )
 }
 
