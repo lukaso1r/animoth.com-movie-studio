@@ -22,7 +22,7 @@ const VideoDetails: React.FC = () => {
 
     return (
         <>
-            <div className="videoDetails  py-4 pt-20 pb-24 flex flex-col gap-16 items-center justify-start bg-black text-white min-h-screen ">
+            <div className="videoDetails  py-4 pb-24 flex flex-col gap-16 items-center justify-start bg-black text-white min-h-screen ">
                 <div className="videoBox w-full sm:w-[90%] md:w-[80%] lg:w-[70%] p-0 m-0 aspect-video">
                     {video ? (
                         <VideoSingleItem video={video} />
