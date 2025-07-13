@@ -25,9 +25,6 @@ const VideoGridMobile: React.FC = () => {
 
   return (
     <div className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-6 grid-flow-row-dense auto-rows-auto gap-0">
-      
-      <button onClick={() => {console.log(videoGridFromCms)}}>test</button>
-      
       {videoGridFromCms.map(video => (
         <VideoItemMobile key={video.id} video={video} />
       ))}

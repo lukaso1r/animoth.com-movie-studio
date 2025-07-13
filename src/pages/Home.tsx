@@ -19,11 +19,15 @@ const Home: React.FC = () => {
     return (
       <div className="relative flex flex-col bg-black">
         {isLoading && <LoadingScreen />}
-        <div className="max-h-[100vh] lg:min-h-[100vh]">
+        <div className="max-h-screen lg:min-h-screen">
           <Showreel onLoaded={handleShowreelLoaded} />
         </div>
-        {/* <VideoGrid  /> */}
-        <VideoGridMobile />
+        <div className='md:hidden' ><VideoGridMobile /></div>
+        <div className='hidden md:block'><VideoGrid /></div>
+        
+        
+
+
       </div>
     )
   }

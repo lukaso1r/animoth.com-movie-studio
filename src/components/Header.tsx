@@ -21,12 +21,12 @@ const Header: React.FC = () => {
 
   return (
     <>
-    { isScrolled && <div className='h-[70px]' /> }
+    { isScrolled && <div className='md:hidden h-[70px]' /> }
 
     <header
-      className={`
-        top-0 w-full flex justify-between items-center p-4 px-8 z-50 bg-black 
-        bg-opacity-30 transition-all duration-500 ease-in-out
+      className={` md:fixed
+        top-0 w-full flex justify-between items-center p-4 px-8 z-50 
+         bg-[rgba(0,0,0,0.3)] transition-all duration-500 ease-in-out
         ${isScrolled ? ' fixed shadow-lg backdrop-blur-md' : ''}
         ${menuOpen ? 'fixed' : ''}
       `}
@@ -41,7 +41,7 @@ const Header: React.FC = () => {
 
       {/* Hamburger button for mobile */}
       <button
-        className="md:hidden flex flex-col justify-center items-center w-10 h-10 focus:outline-none"
+        className="md:hidden flex flex-col justify-center items-center w-10 h-10 focus:outline-hidden"
         aria-label="Toggle menu"
         onClick={() => setMenuOpen((open) => !open)}
       >

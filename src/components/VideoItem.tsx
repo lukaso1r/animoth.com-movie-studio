@@ -111,8 +111,7 @@ const TestVideoItem: React.FC<any> = ({ video }) => {
       />
       ) : (
         <>
-          <p>Video: {JSON.stringify(video.thumbnail.formats.thumbnail.url)}</p>
-          <img src={video.thumbnail.formats.small.url} alt={video.title} className="w-full h-full object-cover" onClick={handlePlay} />
+          <img src={video.thumbnail.formats.medium.url} alt={video.title} className="w-full h-full object-cover" onClick={handlePlay} />
         </>
       )}
       {/* <pre className='text-white'>Tytuł: {video.title}, Kolejność: {video.videoGridOrder}</pre> */}
@@ -129,7 +128,7 @@ const TestVideoItem: React.FC<any> = ({ video }) => {
           absolute p-4 bg-opacity-50 
           flex flex-col opacity-0 group-hover:opacity-100 
           transition-opacity left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2
-          ${isFullscreen ? 'max-h-min max-w-fit textShadow' : 'flex items-center justify-center  bg-black max-h-[100%] min-h-full max-w-full min-w-full'}
+          ${isFullscreen ? 'max-h-min max-w-fit textShadow' : 'flex items-center justify-center  bg-black max-h-full min-h-full max-w-full min-w-full'}
         `}
       >
         
