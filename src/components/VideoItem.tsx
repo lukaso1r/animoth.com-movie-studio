@@ -110,7 +110,10 @@ const TestVideoItem: React.FC<any> = ({ video }) => {
         controls={isFullscreen ? true : false}
       />
       ) : (
-      <img src={video.thumbnail?.url} alt={video.title} className="w-full h-full object-cover" onClick={handlePlay} />
+        <>
+          <p>Video: {JSON.stringify(video.thumbnail.formats.thumbnail.url)}</p>
+          <img src={video.thumbnail.formats.small.url} alt={video.title} className="w-full h-full object-cover" onClick={handlePlay} />
+        </>
       )}
       {/* <pre className='text-white'>Tytuł: {video.title}, Kolejność: {video.videoGridOrder}</pre> */}
       {/* group-hover:bg-black opacity-50 group-hover:opacity-100 
