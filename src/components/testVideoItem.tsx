@@ -108,7 +108,7 @@ const TestVideoItem: React.FC<any> = ({ video }) => {
           
         </div>
         {/* <Link to={`/films/${video.slug}`}>
-            <button type='button' className="bg-transparent text-white px-3 py-1 rounded hover:bg-slate-600 hover:border-slate-600 hover:bg-opacity-60">
+            <button type='button' className="bg-transparent text-white px-3 py-1 rounded-sm hover:bg-slate-600 hover:border-slate-600 hover:bg-opacity-60">
               See more
             </button>
         </Link> */}

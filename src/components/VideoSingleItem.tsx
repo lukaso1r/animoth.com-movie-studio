@@ -76,7 +76,7 @@ const VideoSingleItem: React.FC<any> = ({ video }) => {
                 preload="true"
             />
             ) : (
-            <img src={video.thumbnail?.url} alt={video.title} className="w-[100%] max-w-[100%]" />
+            <img src={video.thumbnail?.url} alt={video.title} className="w-full max-w-full" />
             )}
             {/* <div
                 className="absolute p-4 inset-0 bg-black bg-opacity-50 
